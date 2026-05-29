@@ -1,11 +1,12 @@
 import info from '../assets/information'
+import profileImg from '@/assets/profile.png'
 
 const Logo = () => {
     return (
         <div className="relative w-28 h-28 group">
             <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400 to-cyan-600 opacity-20 blur-md scale-110" />
             <img
-                src="./src/assets/profile.png"
+                src={profileImg}
                 className="relative w-full h-full rounded-full object-cover border-2 border-blue-500/40 shadow-lg"
             />
             <div
