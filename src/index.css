@@ -4,6 +4,7 @@
     --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 
     font: 18px/145% var(--sans);
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.18px;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -16,14 +17,16 @@
 }
 
 #root {
-    width: 1126px;
-    max-width: 100%;
+    width: 100dvw;
+    min-height: 100svh;
     margin: 0 auto;
     text-align: center;
-    min-height: 100svh;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    align-items: center;
+    background: linear-gradient(90deg, #0b0f17 0%, #0f172a 50%, #133f46 100%);
+    color: white;
 }
 
 body {
@@ -33,7 +36,6 @@ body {
 h1,
 h2 {
     font-weight: 500;
-    color: var(--text-h);
 }
 
 h1 {

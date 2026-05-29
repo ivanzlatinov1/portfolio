@@ -1,0 +1,27 @@
+import info from '../assets/information'
+
+const Logo = () => {
+    return (
+        <div className="relative w-28 h-28 group">
+            <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400 to-cyan-600 opacity-20 blur-md scale-110" />
+            <img
+                src="./src/assets/profile.png"
+                className="relative w-full h-full rounded-full object-cover border-2 border-blue-500/40 shadow-lg"
+            />
+            <div
+                className="
+                absolute -bottom-1 left-1/2 -translate-x-1/2
+                bg-blue-600 text-white
+                text-[10px] font-bold tracking-widest uppercase
+                px-2 py-0 rounded-full
+                shadow-md shadow-blue-900/30
+                whitespace-nowrap
+            "
+            >
+                {info.status}
+            </div>
+        </div>
+    )
+}
+
+export default Logo
