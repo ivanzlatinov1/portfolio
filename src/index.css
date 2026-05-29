@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 :root {
     --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 
     font: 18px/145% var(--sans);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Noto Sans', Courier, monospace;
     letter-spacing: 0.18px;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -14,6 +15,8 @@
     @media (max-width: 1024px) {
         font-size: 16px;
     }
+
+    overflow-x: hidden;
 }
 
 #root {
@@ -25,7 +28,13 @@
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
-    background: linear-gradient(90deg, #0b0f17 0%, #0f172a 50%, #133f46 100%);
+    background: linear-gradient(
+        150deg,
+        #1a1e27 0%,
+        #0f172a 50%,
+        #0f254b 75%,
+        #060837 100%
+    );
     color: white;
 }
 
