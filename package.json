@@ -7,8 +7,9 @@
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview",
-        "format": "prettier --write ."
+        "preview": "npm run build && wrangler dev",
+        "format": "prettier --write .",
+        "deploy": "npm run build && wrangler deploy"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -17,13 +18,15 @@
         "@fortawesome/free-solid-svg-icons": "^7.2.0",
         "@fortawesome/react-fontawesome": "^3.3.1",
         "@tailwindcss/vite": "^4.3.0",
+        "groq-sdk": "^1.2.1",
         "react": "^19.2.6",
         "react-dom": "^19.2.6",
         "tailwindcss": "^4.3.0"
     },
     "devDependencies": {
+        "@cloudflare/vite-plugin": "^1.39.0",
         "@eslint/js": "^10.0.1",
-        "@types/node": "^24.12.3",
+        "@types/node": "^24.12.4",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^6.0.1",
@@ -36,6 +39,7 @@
         "prettier": "^3.8.3",
         "typescript": "~6.0.2",
         "typescript-eslint": "^8.59.2",
-        "vite": "^8.0.12"
+        "vite": "^8.0.12",
+        "wrangler": "^4.95.0"
     }
 }

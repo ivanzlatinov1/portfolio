@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# wrangler files
+groq-worker/
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
