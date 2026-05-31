@@ -65,7 +65,10 @@ const ChatBot = () => {
     }
 
     return (
-        <div className="w-[85%] h-full flex flex-col px-[20%] py-16 gap-8">
+        <section
+            className="w-full h-full flex flex-col px-[20%] py-16 gap-8"
+            id="chat"
+        >
             <SectionHeader
                 title="Chat Bot Interface"
                 description="Trained on Ivan Zlatinov's career data"
@@ -179,7 +182,7 @@ const ChatBot = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

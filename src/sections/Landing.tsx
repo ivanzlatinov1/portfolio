@@ -10,7 +10,10 @@ import info from '../assets/information'
 
 const Landing = () => {
     return (
-        <section className="w-full h-full flex flex-col px-[20%] py-16 gap-8">
+        <section
+            className="w-full h-full flex flex-col px-[20%] py-16 gap-8"
+            id="about"
+        >
             <div className="flex flex-row items-end gap-6">
                 <Logo />
                 <div className="flex flex-col">
@@ -44,7 +47,14 @@ const Landing = () => {
                 </div>
 
                 <div className="flex flex-col h-full gap-3 w-56 shrink-0">
-                    <button className="flex items-center cursor-pointer justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                    <button
+                        className="flex items-center cursor-pointer justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                        onClick={() =>
+                            document
+                                .getElementById('chat')
+                                ?.scrollIntoView({ behavior: 'smooth' })
+                        }
+                    >
                         <FontAwesomeIcon icon={faCommentDots} /> Talk to my AI
                     </button>
                     <button className="flex items-center cursor-pointer justify-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-colors">

@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 @import 'tailwindcss';
 
 :root {
-    --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-
-    font: 18px/145% var(--sans);
-    font-family: 'Noto Sans', Courier, monospace;
+    font: 18px/145% var(--font);
+    font-family: 'JetBrains Mono', monospace, sans-serif;
     letter-spacing: 0.18px;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
