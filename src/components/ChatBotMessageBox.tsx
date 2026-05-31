@@ -1,5 +1,6 @@
 import profileImg from '@/assets/profile.png'
 import { useEffect, useRef } from 'react'
+import Waves from './Waves'
 
 interface Message {
     role: 'user' | 'assistant'
@@ -19,7 +20,8 @@ const ChatBotMessageBox = ({ messages, loading }: ChatBotMessageBoxProps) => {
     }, [messages, loading])
 
     return (
-        <div className="flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-3">
+        <div className="relative flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-3">
+            <Waves />
             {messages.map((m, i) => (
                 <div
                     key={i}
@@ -43,7 +45,7 @@ const ChatBotMessageBox = ({ messages, loading }: ChatBotMessageBoxProps) => {
                     )}
 
                     <div
-                        className={`max-w-[72%] rounded-2xl px-4 py-2.5 text-sm text-left leading-6 ${
+                        className={`max-w-[72%] font-mono rounded-2xl px-4 py-2.5 text-sm text-left leading-6 ${
                             m.role === 'user'
                                 ? 'rounded-br-sm text-white'
                                 : 'rounded-bl-sm text-slate-100'

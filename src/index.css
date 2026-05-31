@@ -68,3 +68,32 @@ h2 {
 p {
     margin: 0;
 }
+
+@keyframes wavebar {
+    0%,
+    100% {
+        transform: scaleY(0.18);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeLabel {
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.45;
+    }
+}

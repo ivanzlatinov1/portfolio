@@ -4,7 +4,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import profileImg from '@/assets/profile.png'
-import ChatBotHeader from '../components/ChatBotHeader'
+import SectionHeader from '../components/SectionHeader'
 import ChatBotMessageBox from '../components/ChatBotMessageBox'
 
 interface Message {
@@ -16,7 +16,8 @@ const ChatBot = () => {
     const [messages, setMessages] = useState<Message[]>([
         {
             role: 'assistant',
-            content: "Hi! Ask me anything about Ivan's skills or experience 👋",
+            content:
+                'Hello! Ask me anything about Ivan - his work, skills, or experience.',
         },
     ])
     const [input, setInput] = useState<string>('')
@@ -64,21 +65,23 @@ const ChatBot = () => {
     }
 
     return (
-        <div className="w-full h-full flex flex-col px-[20%] py-16 gap-8">
-            <ChatBotHeader />
+        <div className="w-[85%] h-full flex flex-col px-[20%] py-16 gap-8">
+            <SectionHeader
+                title="Chat Bot Interface"
+                description="Trained on Ivan Zlatinov's career data"
+            />
             <div
-                className="w-full h-175 flex flex-col mb-5 bg-[#050d1a] rounded-3xl border border-cyan-500/40 overflow-hidden"
+                className="w-full h-175 flex flex-col mb-5 bg-black/30 rounded-3xl overflow-hidden"
                 style={{
                     boxShadow:
                         '0 0 30px rgba(6,182,212,0.15), 0 0 80px rgba(6,182,212,0.08), inset 0 0 30px rgba(6,182,212,0.03)',
                 }}
             >
                 <div
-                    className="w-full flex gap-3 px-4 py-3 border-b border-cyan-500/20"
+                    className="w-full flex gap-3 px-4 py-3 border-b border-blue-900/60"
                     style={{
                         background:
                             'linear-gradient(135deg, #0f1f3d 0%, #0a1628 100%)',
-                        boxShadow: '0 4px 20px rgba(6,182,212,0.1)',
                     }}
                 >
                     <div className="relative w-10 h-10 shrink-0">
@@ -132,7 +135,7 @@ const ChatBot = () => {
                 )}
 
                 <div
-                    className="flex gap-2 px-4 py-3 border-t border-cyan-500/20"
+                    className="flex gap-2 px-4 py-3 border-t border-blue-900/60"
                     style={{ background: 'rgba(5,13,26,0.8)' }}
                 >
                     <input
@@ -158,18 +161,18 @@ const ChatBot = () => {
                     <button
                         onClick={sendMessage}
                         disabled={loading}
-                        className={`rounded-xl px-4 py-2 text-white text-sm transition-all ${
-                            loading
-                                ? 'cursor-not-allowed opacity-50'
+                        className={`rounded-xl px-4 py-2 text-white text-sm cursor-pointer hover:scale-105 transition-all duration-200 ${
+                            loading || !input
+                                ? 'cursor-not-allowed'
                                 : 'cursor-pointer hover:scale-105'
                         }`}
                         style={{
-                            background: loading
-                                ? 'rgba(99,102,241,0.4)'
-                                : 'linear-gradient(135deg, #6366f1, #4f46e5)',
-                            boxShadow: loading
-                                ? 'none'
-                                : '0 4px 15px rgba(99,102,241,0.4)',
+                            background:
+                                'linear-gradient(135deg, #6366f1, #4f46e5)',
+                            boxShadow: '0 4px 15px rgba(99,102,241,0.4)',
+                            opacity: loading || !input ? 0.45 : 1,
+                            transition:
+                                'opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease',
                         }}
                     >
                         <FontAwesomeIcon icon={faPaperPlane} />
