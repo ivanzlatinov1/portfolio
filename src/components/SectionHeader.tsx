@@ -1,9 +1,9 @@
 interface SectionHeaderProps {
     title: string
-    description: string
+    description?: string | null
 }
 
-const SectionHeader = ({ title, description }: SectionHeaderProps) => {
+const SectionHeader = ({ title, description = null }: SectionHeaderProps) => {
     return (
         <div className="flex flex-col items-center gap-2">
             <div className="flex items-center w-full">

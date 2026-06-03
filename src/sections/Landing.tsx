@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import {
     faCommentDots,
     faDownload,
     faEnvelope,
+    faShieldHalved,
 } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../components/Logo'
 import info from '../assets/information'
@@ -57,15 +58,44 @@ const Landing = () => {
                     >
                         <FontAwesomeIcon icon={faCommentDots} /> Talk to my AI
                     </button>
-                    <button className="flex items-center cursor-pointer justify-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-colors">
+                    <a
+                        href="mailto:ivanzlatinov006@gmail.com"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    >
                         <FontAwesomeIcon icon={faEnvelope} /> Email
-                    </button>
-                    <button className="flex items-center cursor-pointer justify-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-colors">
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/ivanzlatinov1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    >
                         <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
-                    </button>
-                    <button className="flex items-center cursor-pointer justify-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-colors">
+                    </a>
+                    <a
+                        href="https://github.com/ivanzlatinov1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    >
+                        <FontAwesomeIcon icon={faGithub} /> GitHub
+                    </a>
+                    <a
+                        href="https://github.com/ivanzlatinov1/cybersecurity-portfolio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    >
+                        <FontAwesomeIcon icon={faShieldHalved} /> Cybersecurity
+                        Portfolio
+                    </a>
+                    <a
+                        href="../assets/IvanZlatinov_CV.pdf"
+                        download="Ivan_Zlatinov_CV.pdf"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    >
                         <FontAwesomeIcon icon={faDownload} /> Download my CV
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
