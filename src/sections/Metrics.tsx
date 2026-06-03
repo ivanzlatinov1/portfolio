@@ -8,15 +8,15 @@ import {
 
 const Metrics = () => {
     return (
-        <>
+        <section
+            className="w-full h-full flex flex-col justify-center py-12 mt-5"
+            id="metrics"
+        >
             <SectionHeader
                 title="Impact Metrics"
                 description="A snapshot of key outcomes delivered across my projects"
             />
-            <section
-                className="w-full h-full flex justify-center px-[20%] py-10 gap-8"
-                id="metrics"
-            >
+            <div className="w-full h-full flex justify-center px-[20%] py-10 [10%] gap-8">
                 <Metric
                     icon={{ icon: faStopwatch }}
                     stat="50%"
@@ -35,8 +35,8 @@ const Metrics = () => {
                     description="Pages restructured & deployed"
                     project="CustomCADsDemoDesign"
                 />
-            </section>
-        </>
+            </div>
+        </section>
     )
 }
 

@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Landing from './sections/Landing'
 import ChatBot from './sections/ChatBot'
+import Career from './sections/Career'
 import Metrics from './sections/Metrics'
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
             <Header />
             <Landing />
             <ChatBot />
+            <Career />
             <Metrics />
         </>
     )

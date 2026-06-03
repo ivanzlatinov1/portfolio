@@ -95,3 +95,32 @@ p {
         opacity: 0.45;
     }
 }
+
+@keyframes laserColor {
+    0% {
+        stroke: #38bdf8;
+        filter: drop-shadow(0 0 1px #38bdf8);
+    }
+    50% {
+        stroke: #06b6d4;
+        filter: drop-shadow(0 0 2px #06b6d4);
+    }
+    100% {
+        stroke: #38bdf8;
+        filter: drop-shadow(0 0 1px #38bdf8);
+    }
+}
+@keyframes laserMarch {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -5;
+    }
+}
+
+.laser-glow {
+    animation:
+        laserColor 1.8s ease-in-out infinite,
+        laserMarch 4s linear infinite;
+}
