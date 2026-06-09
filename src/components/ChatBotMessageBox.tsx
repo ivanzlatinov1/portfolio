@@ -1,5 +1,5 @@
 import profileImg from '@/assets/profile.png'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import Waves from './Waves'
 
 interface Message {
@@ -14,10 +14,6 @@ interface ChatBotMessageBoxProps {
 
 const ChatBotMessageBox = ({ messages, loading }: ChatBotMessageBoxProps) => {
     const bottomRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
-    }, [messages, loading])
 
     return (
         <div className="relative flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-3 overflow-x-hidden">

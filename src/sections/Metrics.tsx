@@ -9,7 +9,7 @@ import {
 const Metrics = () => {
     return (
         <section
-            className="w-full h-full flex flex-col justify-center py-12 mt-5"
+            className="w-full h-full flex flex-col justify-center py-12 mt-5 scroll-mt-20"
             id="metrics"
         >
             <SectionHeader

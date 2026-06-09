@@ -28,7 +28,10 @@ const positions = [
 ]
 
 const Career = () => (
-    <section className="w-full h-full flex flex-col px-[20%] gap-8" id="career">
+    <section
+        className="w-full h-full flex flex-col px-[20%] gap-8 scroll-mt-20"
+        id="career"
+    >
         <SectionHeader
             title="Career"
             description="A look at my professional experience and the roles that have shaped my skills"

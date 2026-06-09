@@ -66,7 +66,7 @@ const ChatBot = () => {
 
     return (
         <section
-            className="w-full h-full flex flex-col px-[20%] py-16 gap-8"
+            className="w-full h-full flex flex-col px-[20%] py-16 gap-8 scroll-mt-10"
             id="chat"
         >
             <SectionHeader

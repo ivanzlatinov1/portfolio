@@ -13,9 +13,14 @@ const NAV_LINKS = [
 
 const Header = () => {
     const [progress, setProgress] = useState(0)
-    const [active, setActive] = useState('About')
+    const [active, setActive] = useState('about')
     const [menuOpen, setMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        window.history.scrollRestoration = 'manual'
+        window.scrollTo(0, 0)
+    }, [])
 
     useEffect(() => {
         const onScroll = () => {
