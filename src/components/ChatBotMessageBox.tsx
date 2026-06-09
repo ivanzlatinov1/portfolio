@@ -1,6 +1,6 @@
-import profileImg from '@/assets/profile.png'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import Waves from './Waves'
+import profileImg from '@/assets/profile.png'
 
 interface Message {
     role: 'user' | 'assistant'
