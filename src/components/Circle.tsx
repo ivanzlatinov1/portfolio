@@ -48,11 +48,11 @@ const Circle = ({ title, description }: CircleProps) => {
                             width: '38%',
                             height: '22%',
                             background:
-                                'radial-gradient(ellipse, rgba(255,255,255,0.12) 0%, transparent 100%)',
+                                'radial-gradient(ellipse, rgba(255,255,255,0.0) 0%, transparent 100%)',
                             transform: 'rotate(-20deg)',
                         }}
                     />
-                    <span className="font-mono text-sm font-medium tracking-widest uppercase text-indigo-200">
+                    <span className="text-sm font-bold tracking-widest uppercase text-indigo-200">
                         {title}
                     </span>
                     <span

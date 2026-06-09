@@ -4,6 +4,8 @@ import ChatBot from './sections/ChatBot'
 import Career from './sections/Career'
 import Metrics from './sections/Metrics'
 import EngineeringWorkflow from './sections/EngineeringWorkflow'
+import Skills from './sections/Skills'
+import Footer from './components/Footer'
 
 const App = () => {
     return (
@@ -14,7 +16,8 @@ const App = () => {
             <Career />
             <Metrics />
             <EngineeringWorkflow />
-            <div className="h-screen w-full" />
+            <Skills />
+            <Footer />
         </>
     )
 }

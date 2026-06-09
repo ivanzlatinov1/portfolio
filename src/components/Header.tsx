@@ -55,7 +55,8 @@ const Header = () => {
                     : '0.5px solid transparent',
             }}
         >
-            <div className="flex items-center justify-between px-6 h-13 max-w-6xl mx-auto">
+            <div className="flex items-center justify-between md:justify-center px-6 h-13 max-w-6xl mx-auto">
+                {' '}
                 <nav className="hidden md:flex items-center gap-7">
                     {NAV_LINKS.map(({ label, href }) => (
                         <button
