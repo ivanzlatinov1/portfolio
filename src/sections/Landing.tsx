@@ -12,14 +12,17 @@ import info from '../assets/information'
 const Landing = () => {
     return (
         <section
-            className="w-full h-full flex flex-col px-[20%] py-16 gap-8"
+            className="w-full h-full flex flex-col px-6 sm:px-12 md:px-[15%] lg:px-[20%] py-16 gap-8"
             id="about"
         >
+            {/* Header row — hide Logo on mobile */}
             <div className="flex flex-row items-end gap-6">
-                <Logo />
+                <div className="hidden md:block">
+                    <Logo />
+                </div>
                 <div className="flex flex-col">
                     <h1
-                        className="text-5xl font-black text-white tracking-tight"
+                        className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight"
                         style={{
                             textShadow:
                                 '0 0 30px rgba(59,130,246,0.6), 0 0 60px rgba(59,130,246,0.3)',
@@ -27,7 +30,7 @@ const Landing = () => {
                     >
                         Ivan Zlatinov
                     </h1>
-                    <div className="flex flex-row items-center gap-3 text-md text-cyan-300">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm sm:text-md text-cyan-300 mt-1">
                         <span>Security-First Development</span>
                         <span className="text-gray-500">•</span>
                         <span>Infrastructure as Code</span>
@@ -37,19 +40,21 @@ const Landing = () => {
                 </div>
             </div>
 
-            <div className="flex flex-row gap-12 items-center">
+            {/* Body — stacks on mobile, side-by-side on md+ */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center">
                 <div className="flex flex-col gap-5 flex-1">
-                    <p className="text-base text-start leading-relaxed text-gray-300">
+                    <p className="text-sm sm:text-base text-start leading-relaxed text-gray-300">
                         {info.landing_1}
                     </p>
-                    <p className="text-base text-start leading-relaxed text-gray-300">
+                    <p className="text-sm sm:text-base text-start leading-relaxed text-gray-300">
                         {info.landing_2}
                     </p>
                 </div>
 
-                <div className="flex flex-col h-full gap-3 w-56 shrink-0">
+                {/* Buttons — full width on mobile, fixed width on md+ */}
+                <div className="flex flex-col gap-3 w-full md:w-56 md:shrink-0">
                     <button
-                        className="flex items-center cursor-pointer justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                        className="flex items-center cursor-pointer justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm sm:text-base"
                         onClick={() =>
                             document
                                 .getElementById('chat')
@@ -60,7 +65,7 @@ const Landing = () => {
                     </button>
                     <a
                         href="mailto:ivanzlatinov006@gmail.com"
-                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)] text-sm sm:text-base"
                     >
                         <FontAwesomeIcon icon={faEnvelope} /> Email
                     </a>
@@ -68,7 +73,7 @@ const Landing = () => {
                         href="https://www.linkedin.com/in/ivanzlatinov1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)] text-sm sm:text-base"
                     >
                         <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
                     </a>
@@ -76,7 +81,7 @@ const Landing = () => {
                         href="https://github.com/ivanzlatinov1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)] text-sm sm:text-base"
                     >
                         <FontAwesomeIcon icon={faGithub} /> GitHub
                     </a>
@@ -84,7 +89,7 @@ const Landing = () => {
                         href="https://github.com/ivanzlatinov1/cybersecurity-portfolio"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)] text-sm sm:text-base"
                     >
                         <FontAwesomeIcon icon={faShieldHalved} /> Cybersecurity
                         Portfolio
@@ -92,7 +97,7 @@ const Landing = () => {
                     <a
                         href="../assets/IvanZlatinov_CV.pdf"
                         download="Ivan_Zlatinov_CV.pdf"
-                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)] text-sm sm:text-base"
                     >
                         <FontAwesomeIcon icon={faDownload} /> Download my CV
                     </a>

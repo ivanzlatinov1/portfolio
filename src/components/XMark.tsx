@@ -21,13 +21,14 @@ const XMark = ({ p }: XMarkProps) => {
 
     return (
         <div
-            className="absolute flex flex-col items-center gap-2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute flex flex-col items-center gap-1 sm:gap-2 -translate-x-1/2 -translate-y-1/2"
             style={{ left: p.left, top: p.top }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
+            {/* Tooltip */}
             <div
-                className="absolute bottom-23 left-1/2 w-64 rounded-xl p-3 pointer-events-none z-10 transition-all duration-200"
+                className="absolute bottom-16 sm:bottom-23 left-1/2 w-44 sm:w-64 rounded-xl p-2 sm:p-3 pointer-events-none z-10 transition-all duration-200"
                 style={{
                     background: '#0a1628',
                     border: `1px solid ${p.borderColor}44`,
@@ -36,21 +37,28 @@ const XMark = ({ p }: XMarkProps) => {
                 }}
             >
                 <p
-                    className="text-sm font-medium m-0"
+                    className="text-xs sm:text-sm font-medium m-0"
                     style={{ color: p.color }}
                 >
                     {p.title}
                 </p>
-                <p className="text-xs m-0 mt-0.5" style={{ color: '#8ab4d4' }}>
+                <p
+                    className="text-[10px] sm:text-xs m-0 mt-0.5"
+                    style={{ color: '#8ab4d4' }}
+                >
                     {p.subtitle}
                 </p>
-                <p className="text-xs m-0 mt-1.5" style={{ color: '#5a7a9a' }}>
+                <p
+                    className="text-[10px] sm:text-xs m-0 mt-1.5"
+                    style={{ color: '#5a7a9a' }}
+                >
                     {p.stack}
                 </p>
             </div>
 
+            {/* Circle marker */}
             <div
-                className="relative w-13 h-13 bg-[#0f1d38] rounded-full flex items-center justify-center cursor-pointer transition-transform duration-200"
+                className="relative w-9 h-9 sm:w-13 sm:h-13 bg-[#0f1d38] rounded-full flex items-center justify-center cursor-pointer"
                 style={{
                     border: `1.5px solid ${p.borderColor}`,
                     transform: hovered ? 'scale(1.18)' : 'scale(1)',
@@ -60,7 +68,7 @@ const XMark = ({ p }: XMarkProps) => {
                 <div
                     className="absolute rounded-full pointer-events-none"
                     style={{
-                        inset: -8,
+                        inset: -6,
                         border: `1px dashed ${p.borderColor}`,
                         opacity: 0.4,
                     }}
@@ -68,8 +76,8 @@ const XMark = ({ p }: XMarkProps) => {
                 <div
                     className="absolute rounded-sm"
                     style={{
-                        width: 18,
-                        height: 2.5,
+                        width: 13,
+                        height: 2,
                         background: p.color,
                         transform: 'rotate(45deg)',
                     }}
@@ -77,15 +85,18 @@ const XMark = ({ p }: XMarkProps) => {
                 <div
                     className="absolute rounded-sm"
                     style={{
-                        width: 18,
-                        height: 2.5,
+                        width: 13,
+                        height: 2,
                         background: p.color,
                         transform: 'rotate(-45deg)',
                     }}
                 />
             </div>
 
-            <span className="text-xs" style={{ color: p.color, opacity: 0.7 }}>
+            <span
+                className="text-[10px] sm:text-xs"
+                style={{ color: p.color, opacity: 0.7 }}
+            >
                 {p.year}
             </span>
         </div>

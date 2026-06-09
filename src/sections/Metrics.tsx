@@ -16,7 +16,7 @@ const Metrics = () => {
                 title="Impact Metrics"
                 description="A snapshot of key outcomes delivered across my projects"
             />
-            <div className="w-full h-full flex justify-center px-[20%] py-10 [10%] gap-8">
+            <div className="w-full h-full grid grid-cols-1 sm:grid-cols-3 px-6 sm:px-[10%] lg:px-[20%] py-10 gap-4 sm:gap-6 lg:gap-8">
                 <Metric
                     icon={{ icon: faStopwatch }}
                     stat="50%"
