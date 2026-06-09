@@ -138,7 +138,7 @@ const ChatBot = () => {
                 )}
 
                 <div
-                    className="flex gap-2 px-4 py-3 border-t border-blue-900/60"
+                    className="flex gap-2 px-3 sm:px-4 py-2 sm:py-3 border-t border-blue-900/60"
                     style={{ background: 'rgba(5,13,26,0.8)' }}
                 >
                     <input
@@ -146,7 +146,7 @@ const ChatBot = () => {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="Ask a question..."
-                        className="flex-1 rounded-xl px-4 py-2 text-sm text-slate-200 placeholder-slate-500 outline-none transition-all"
+                        className="flex-1 rounded-xl px-3 sm:px-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 outline-none transition-all"
                         style={{
                             background: 'rgba(15,31,61,0.8)',
                             border: '1px solid rgba(6,182,212,0.2)',
@@ -164,7 +164,7 @@ const ChatBot = () => {
                     <button
                         onClick={sendMessage}
                         disabled={loading}
-                        className={`rounded-xl px-4 py-2 text-white text-sm cursor-pointer hover:scale-105 transition-all duration-200 ${
+                        className={`rounded-xl px-3 sm:px-4 py-2 text-white text-xs sm:text-sm transition-all duration-200 ${
                             loading || !input
                                 ? 'cursor-not-allowed'
                                 : 'cursor-pointer hover:scale-105'

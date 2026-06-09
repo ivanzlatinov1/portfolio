@@ -38,8 +38,8 @@ const SectionHeader = ({ title, description = null }: SectionHeaderProps) => {
             </div>
 
             <p
-                className="font-mono text-xs uppercase tracking-[1.5px]"
-                style={{ color: 'rgba(148,163,184,0.45)' }}
+                className="font-mono uppercase tracking-[1.5px] text-[10px] sm:text-xs md:text-sm px-4 sm:px-6"
+                style={{ color: 'rgba(148,163,184,0.75)' }}
             >
                 {description}
             </p>

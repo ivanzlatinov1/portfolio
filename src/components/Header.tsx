@@ -7,7 +7,7 @@ const NAV_LINKS = [
     { label: 'Chat', href: '#chat' },
     { label: 'Career', href: '#career' },
     { label: 'Metrics', href: '#metrics' },
-    { label: 'Mindset', href: '#mindset' },
+    { label: 'Approach', href: '#approach' },
     { label: 'Skills', href: '#skills' },
 ]
 
@@ -44,7 +44,7 @@ const Header = () => {
 
     return (
         <header
-            className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+            className="fixed top-0 left-0 right-0 transition-all duration-300 z-1000"
             style={{
                 background: scrolled
                     ? 'rgba(10,22,40,0.92)'
@@ -55,7 +55,7 @@ const Header = () => {
                     : '0.5px solid transparent',
             }}
         >
-            <div className="flex items-center justify-center px-6 h-13 max-w-6xl mx-auto">
+            <div className="flex items-center justify-between px-6 h-13 max-w-6xl mx-auto">
                 <nav className="hidden md:flex items-center gap-7">
                     {NAV_LINKS.map(({ label, href }) => (
                         <button
