@@ -17,38 +17,42 @@ interface XMarkProps {
 }
 
 const XMark = ({ p }: XMarkProps) => {
-    const [hovered, setHovered] = useState(false)
+    const [active, setActive] = useState(false)
 
     return (
         <div
             className="absolute flex flex-col items-center gap-1 sm:gap-2 -translate-x-1/2 -translate-y-1/2"
             style={{ left: p.left, top: p.top }}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            onMouseEnter={() => setActive(true)}
+            onMouseLeave={() => setActive(false)}
+            onTouchStart={(e) => {
+                e.preventDefault()
+                setActive((prev) => !prev)
+            }}
         >
             <div
-                className="absolute bottom-16 sm:bottom-23 left-1/2 w-44 sm:w-64 rounded-xl p-2 sm:p-3 pointer-events-none z-10 transition-all duration-200"
+                className="absolute bottom-10 sm:bottom-16 left-1/2 w-36 sm:w-56 rounded-xl p-2 sm:p-3 pointer-events-none z-10 transition-all duration-200"
                 style={{
                     background: '#0a1628',
                     border: `1px solid ${p.borderColor}44`,
-                    transform: `translateX(-50%) translateY(${hovered ? '0px' : '6px'})`,
-                    opacity: hovered ? 1 : 0,
+                    transform: `translateX(-50%) translateY(${active ? '0px' : '6px'})`,
+                    opacity: active ? 1 : 0,
                 }}
             >
                 <p
-                    className="text-xs sm:text-sm font-medium m-0"
+                    className="text-[11px] sm:text-sm font-medium m-0 leading-tight"
                     style={{ color: p.color }}
                 >
                     {p.title}
                 </p>
                 <p
-                    className="text-[10px] sm:text-xs m-0 mt-0.5"
+                    className="text-[10px] sm:text-xs m-0 mt-0.5 leading-tight"
                     style={{ color: '#8ab4d4' }}
                 >
                     {p.subtitle}
                 </p>
                 <p
-                    className="text-[10px] sm:text-xs m-0 mt-1.5"
+                    className="text-[10px] sm:text-xs m-0 mt-1.5 leading-tight"
                     style={{ color: '#5a7a9a' }}
                 >
                     {p.stack}
@@ -56,17 +60,17 @@ const XMark = ({ p }: XMarkProps) => {
             </div>
 
             <div
-                className="relative w-9 h-9 sm:w-13 sm:h-13 bg-[#0f1d38] rounded-full flex items-center justify-center cursor-pointer"
+                className="relative w-7 h-7 sm:w-11 sm:h-11 bg-[#0f1d38] rounded-full flex items-center justify-center cursor-pointer"
                 style={{
                     border: `1.5px solid ${p.borderColor}`,
-                    transform: hovered ? 'scale(1.18)' : 'scale(1)',
+                    transform: active ? 'scale(1.18)' : 'scale(1)',
                     transition: 'transform 0.2s cubic-bezier(0.34,1.56,0.64,1)',
                 }}
             >
                 <div
                     className="absolute rounded-full pointer-events-none"
                     style={{
-                        inset: -6,
+                        inset: -5,
                         border: `1px dashed ${p.borderColor}`,
                         opacity: 0.4,
                     }}
@@ -74,7 +78,7 @@ const XMark = ({ p }: XMarkProps) => {
                 <div
                     className="absolute rounded-sm"
                     style={{
-                        width: 13,
+                        width: 10,
                         height: 2,
                         background: p.color,
                         transform: 'rotate(45deg)',
@@ -83,7 +87,7 @@ const XMark = ({ p }: XMarkProps) => {
                 <div
                     className="absolute rounded-sm"
                     style={{
-                        width: 13,
+                        width: 10,
                         height: 2,
                         background: p.color,
                         transform: 'rotate(-45deg)',
@@ -92,7 +96,7 @@ const XMark = ({ p }: XMarkProps) => {
             </div>
 
             <span
-                className="text-[10px] sm:text-xs"
+                className="text-[9px] sm:text-xs"
                 style={{ color: p.color, opacity: 0.7 }}
             >
                 {p.year}

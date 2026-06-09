@@ -29,7 +29,7 @@ const positions = [
 
 const Career = () => (
     <section
-        className="w-full h-full flex flex-col px-[20%] gap-8 scroll-mt-20"
+        className="w-full h-full flex flex-col px-4 sm:px-8 md:px-[10%] lg:px-[20%] gap-8 scroll-mt-20"
         id="career"
     >
         <SectionHeader
@@ -38,14 +38,20 @@ const Career = () => (
         />
 
         <div
-            className="relative w-full h-70 rounded-xl overflow-hidden"
-            style={{
-                backgroundImage: `url(${worldImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }}
+            className="relative w-full rounded-xl"
+            style={{ height: 'clamp(180px, 30vw, 280px)' }}
         >
-            <div className="absolute inset-0 bg-[#0f1d38]/80 z-0 border-2 border-black/10" />
+            <div
+                className="absolute inset-0 rounded-xl overflow-hidden"
+                style={{
+                    backgroundImage: `url(${worldImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="absolute inset-0 bg-[#0f1d38]/80 border-2 border-black/10" />
+            </div>
+
             <svg
                 className="absolute inset-0 w-full h-full pointer-events-none"
                 viewBox="0 0 100 100"
