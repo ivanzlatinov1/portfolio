@@ -1,5 +1,6 @@
 import SectionHeader from '../components/SectionHeader'
 import XMark from '../components/XMark'
+import worldImage from '@/assets/world.jpg'
 
 const positions = [
     {
@@ -36,7 +37,7 @@ const Career = () => (
         <div
             className="relative w-full h-70 rounded-xl overflow-hidden"
             style={{
-                backgroundImage: 'url(src/assets/world.jpg)',
+                backgroundImage: `url(${worldImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
