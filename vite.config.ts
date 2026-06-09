@@ -6,6 +6,7 @@ import path from 'path'
 import { cloudflare } from '@cloudflare/vite-plugin'
 
 export default defineConfig({
+    base: '/portfolio/',
     plugins: [react(), tailwindcss(), cloudflare()],
     resolve: {
         alias: {
