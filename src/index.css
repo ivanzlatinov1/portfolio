@@ -28,10 +28,10 @@
     align-items: center;
     background: linear-gradient(
         150deg,
-        #1a1e27 0%,
+        #060837 0%,
+        #0f254b 25%,
         #0f172a 50%,
-        #0f254b 75%,
-        #060837 100%
+        #081224f2 100%
     );
     color: white;
 }
