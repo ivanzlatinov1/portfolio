@@ -15,10 +15,6 @@ interface ChatBotMessageBoxProps {
 const ChatBotMessageBox = ({ messages, loading }: ChatBotMessageBoxProps) => {
     const bottomRef = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
-    }, [messages, loading])
-
     return (
         <div className="relative flex-1 overflow-y-auto overflow-x-hidden px-3 sm:px-4 py-3 flex flex-col gap-3 h-full">
             <Waves />

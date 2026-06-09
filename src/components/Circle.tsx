@@ -3,15 +3,28 @@ import { useState } from 'react'
 interface CircleProps {
     title: string
     description: string
+    shortDescription: string
+    isMobile: boolean
+    size: number
 }
 
-const Circle = ({ title, description }: CircleProps) => {
+const Circle = ({
+    title,
+    description,
+    shortDescription,
+    isMobile,
+    size,
+}: CircleProps) => {
     const [flipped, setFlipped] = useState(false)
 
     return (
         <div
-            className="w-72 h-72 cursor-pointer select-none"
-            style={{ perspective: '900px' }}
+            className="cursor-pointer select-none"
+            style={{
+                width: size,
+                height: size,
+                perspective: '900px',
+            }}
             onClick={() => setFlipped((f) => !f)}
         >
             <div
@@ -96,7 +109,7 @@ const Circle = ({ title, description }: CircleProps) => {
                         className="font-mono text-xs leading-relaxed"
                         style={{ color: '#cff8ff' }}
                     >
-                        {description}
+                        {isMobile ? shortDescription : description}
                     </p>
                 </div>
             </div>
