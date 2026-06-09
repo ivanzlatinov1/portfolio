@@ -66,7 +66,7 @@ const ChatBot = () => {
 
     return (
         <section
-            className="w-full h-full flex flex-col px-[20%] py-16 gap-8 scroll-mt-10"
+            className="w-full h-full flex flex-col px-4 sm:px-8 md:px-[10%] lg:px-[20%] py-10 sm:py-16 gap-8 scroll-mt-10"
             id="chat"
         >
             <SectionHeader
@@ -74,20 +74,21 @@ const ChatBot = () => {
                 description="Trained on Ivan Zlatinov's career data"
             />
             <div
-                className="w-full h-175 flex flex-col mb-5 bg-black/30 rounded-3xl overflow-hidden"
+                className="w-full flex flex-col mb-5 bg-black/30 rounded-2xl sm:rounded-3xl overflow-hidden"
                 style={{
+                    height: 'clamp(420px, 60vh, 700px)',
                     boxShadow:
                         '0 0 30px rgba(6,182,212,0.15), 0 0 80px rgba(6,182,212,0.08), inset 0 0 30px rgba(6,182,212,0.03)',
                 }}
             >
                 <div
-                    className="w-full flex gap-3 px-4 py-3 border-b border-blue-900/60"
+                    className="w-full flex gap-3 px-3 sm:px-4 py-2.5 sm:py-3 border-b border-blue-900/60 shrink-0"
                     style={{
                         background:
                             'linear-gradient(135deg, #0f1f3d 0%, #0a1628 100%)',
                     }}
                 >
-                    <div className="relative w-10 h-10 shrink-0">
+                    <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0">
                         <img
                             className="w-full h-full rounded-full object-cover border-2 border-cyan-500/60 shadow-lg"
                             src={profileImg}
@@ -103,19 +104,21 @@ const ChatBot = () => {
                         />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <p className="text-sm text-left font-semibold text-cyan-300 tracking-wide">
+                        <p className="text-xs sm:text-sm text-left font-semibold text-cyan-300 tracking-wide">
                             Ivan's AI Assistant
                         </p>
-                        <p className="text-xs text-slate-400">
+                        <p className="text-[10px] sm:text-xs text-slate-400">
                             Ask about experience, skills, or projects
                         </p>
                     </div>
                 </div>
 
-                <ChatBotMessageBox messages={messages} loading={loading} />
+                <div className="flex-1 min-h-0">
+                    <ChatBotMessageBox messages={messages} loading={loading} />
+                </div>
 
                 {messages.length === 1 && (
-                    <div className="flex flex-wrap justify-center gap-2 px-4 pb-3">
+                    <div className="flex flex-wrap justify-center gap-2 px-3 sm:px-4 pb-2 sm:pb-3 shrink-0">
                         {[
                             "What's his tech stack?",
                             'Is he open to work?',
@@ -124,7 +127,7 @@ const ChatBot = () => {
                             <button
                                 key={question}
                                 onClick={() => setInput(question)}
-                                className="cursor-pointer rounded-full px-3 py-1.5 font-bold text-xs text-cyan-300 transition-all hover:scale-105"
+                                className="cursor-pointer rounded-full px-3 py-1.5 font-bold text-[10px] sm:text-xs text-cyan-300 transition-all hover:scale-105"
                                 style={{
                                     background: 'rgba(6,182,212,0.08)',
                                     border: '1px solid rgba(6,182,212,0.3)',
@@ -138,7 +141,7 @@ const ChatBot = () => {
                 )}
 
                 <div
-                    className="flex gap-2 px-3 sm:px-4 py-2 sm:py-3 border-t border-blue-900/60"
+                    className="flex gap-2 px-3 sm:px-4 py-2 sm:py-3 border-t border-blue-900/60 shrink-0"
                     style={{ background: 'rgba(5,13,26,0.8)' }}
                 >
                     <input
@@ -146,7 +149,7 @@ const ChatBot = () => {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="Ask a question..."
-                        className="flex-1 rounded-xl px-3 sm:px-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 outline-none transition-all"
+                        className="flex-1 min-w-0 rounded-xl px-3 sm:px-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 outline-none transition-all"
                         style={{
                             background: 'rgba(15,31,61,0.8)',
                             border: '1px solid rgba(6,182,212,0.2)',
@@ -164,7 +167,7 @@ const ChatBot = () => {
                     <button
                         onClick={sendMessage}
                         disabled={loading}
-                        className={`rounded-xl px-3 sm:px-4 py-2 text-white text-xs sm:text-sm transition-all duration-200 ${
+                        className={`shrink-0 rounded-xl px-3 sm:px-4 py-2 text-white text-xs sm:text-sm transition-all duration-200 ${
                             loading || !input
                                 ? 'cursor-not-allowed'
                                 : 'cursor-pointer hover:scale-105'
