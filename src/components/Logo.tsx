@@ -3,7 +3,7 @@ import profileImg from '@/assets/profile.png'
 
 const Logo = () => {
     return (
-        <div className="relative w-30 h-30 group hidden md:block">
+        <div className="relative w-32 h-32 group hidden md:block">
             <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400 to-cyan-600 opacity-20 blur-md scale-110" />
             <img
                 src={profileImg}

@@ -12,14 +12,14 @@ import info from '../assets/information'
 const Landing = () => {
     return (
         <section
-            className="w-full h-full flex flex-col px-6 sm:px-12 md:px-[15%] lg:px-[20%] py-16 gap-8"
+            className="w-full h-full flex flex-col px-6 sm:px-12 md:px-[15%] lg:px-[20%] pt-16 gap-5 lg:gap-0"
             id="about"
         >
-            <div className="flex flex-row items-end gap-6">
-                <div className="hidden md:block">
+            <div className="landing mx-auto w-full 2xl:w-[70%] flex flex-col md:flex-row items-center justify-center gap-6 lg:justify-start lg:gap-10">
+                <div className="hidden md:flex items-center justify-center flex-none mt-5">
                     <Logo />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center">
                     <h1
                         className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight"
                         style={{
@@ -29,17 +29,16 @@ const Landing = () => {
                     >
                         Ivan Zlatinov
                     </h1>
-                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm sm:text-md text-cyan-300 mt-1">
-                        <span>Security-First Development</span>
-                        <span className="text-gray-500">•</span>
-                        <span>Infrastructure as Code</span>
-                        <span className="text-gray-500">•</span>
-                        <span>Cloud Resilience</span>
+
+                    <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-sm sm:text-md text-cyan-300">
+                        <span>Application Security Engineer</span>
+                        <span className="text-gray-400">&</span>
+                        <span>Full-Stack Developer</span>
                     </div>
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center mt-5 lg:mt-5 xl:mt-0">
                 <div className="flex flex-col gap-5 flex-1">
                     <p className="text-sm sm:text-base text-start leading-relaxed text-gray-300">
                         {info.landing_1}
