@@ -15,7 +15,6 @@ const Landing = () => {
             className="w-full h-full flex flex-col px-6 sm:px-12 md:px-[15%] lg:px-[20%] py-16 gap-8"
             id="about"
         >
-            {/* Header row — hide Logo on mobile */}
             <div className="flex flex-row items-end gap-6">
                 <div className="hidden md:block">
                     <Logo />
@@ -40,7 +39,6 @@ const Landing = () => {
                 </div>
             </div>
 
-            {/* Body — stacks on mobile, side-by-side on md+ */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center">
                 <div className="flex flex-col gap-5 flex-1">
                     <p className="text-sm sm:text-base text-start leading-relaxed text-gray-300">
@@ -51,7 +49,6 @@ const Landing = () => {
                     </p>
                 </div>
 
-                {/* Buttons — full width on mobile, fixed width on md+ */}
                 <div className="flex flex-col gap-3 w-full md:w-56 md:shrink-0">
                     <button
                         className="flex items-center cursor-pointer justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm sm:text-base"

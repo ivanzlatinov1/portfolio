@@ -71,7 +71,6 @@ const Footer = () => {
                             </span>
                         </div>
 
-                        {/* Divider */}
                         <div
                             className="w-10 h-px"
                             style={{

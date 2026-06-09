@@ -26,7 +26,6 @@ const XMark = ({ p }: XMarkProps) => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            {/* Tooltip */}
             <div
                 className="absolute bottom-16 sm:bottom-23 left-1/2 w-44 sm:w-64 rounded-xl p-2 sm:p-3 pointer-events-none z-10 transition-all duration-200"
                 style={{
@@ -56,7 +55,6 @@ const XMark = ({ p }: XMarkProps) => {
                 </p>
             </div>
 
-            {/* Circle marker */}
             <div
                 className="relative w-9 h-9 sm:w-13 sm:h-13 bg-[#0f1d38] rounded-full flex items-center justify-center cursor-pointer"
                 style={{

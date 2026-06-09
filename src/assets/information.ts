@@ -1,16 +1,12 @@
-const landing_1 = `Ivan architecturally integrates security
-                   directly into software and infrastructure development lifecycles,
-                   pioneering a 'security as code' philosophy with a detection-first mindset.
-                   He designs and fortifies robust, observable, and scalable systems,
-                   leveraging his unique blend of full-stack development and infrastructure expertise
-                   to solve complex cybersecurity challenges from the ground up`
+const landing_1 = `Welcome to my Portfolio project! I am an Application Security engineer and Full-Stack Developer focused on building secure,
+                   scalable software with a security-first mindset. Combining hands-on experience in .NET,
+                   React, DevOps, and cybersecurity, I create solutions that are reliable, maintainable,
+                   and designed with security in mind from the start`
 
-const landing_2 = `Demonstrating this impact, Ivan designed and deployed 'HVACrate',
-                   an ASP.NET Core MVC web application that slashed manual calculation
-                   time by approximately 50%. Subsequently, he transformed its security posture
-                   by implementing multi-layered defenses including JWT authentication,
-                   role-based authorization, and restrictive CORS policies, moving it from
-                   a functional prototype to a production-grade secure system`
+const landing_2 = `From developing HVACrate during my engineering internship to building backend APIs
+                   with Clean Architecture and Domain-Driven Design, I enjoy turning complex problems
+                   into practical software solutions while continuously expanding my expertise in
+                   application security, cloud technologies, and secure software development`
 
 const status = 'Open to Work'
 
