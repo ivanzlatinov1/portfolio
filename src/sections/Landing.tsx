@@ -91,7 +91,7 @@ const Landing = () => {
                         Portfolio
                     </a>
                     <a
-                        href="../assets/IvanZlatinov_CV.pdf"
+                        href="https://github.com/ivanzlatinov1/portfolio/releases/download/v1/IvanZlatinovCV.pdf"
                         download="Ivan_Zlatinov_CV.pdf"
                         className="flex items-center justify-center gap-2 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white py-3 px-4 rounded-lg transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.6)] text-sm sm:text-base"
                     >
